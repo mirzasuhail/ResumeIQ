@@ -16,7 +16,7 @@ export const analyzeResume = async (file) => {
   const formData = new FormData();
   formData.append('resume', file);
 
-  const response = await api.post('/resume/analyze', formData, {
+  const response = await api.post('/api/resume/analyze', formData, {
     headers: {
       'Content-Type': 'multipart/form-data'
     }
@@ -35,7 +35,7 @@ export const matchJobDescription = async (file, jobDescription) => {
   formData.append('resume', file);
   formData.append('jobDescription', jobDescription);
 
-  const response = await api.post('/recruiter/match', formData, {
+  const response = await api.post('/api/recruiter/match', formData, {
     headers: {
       'Content-Type': 'multipart/form-data'
     }
