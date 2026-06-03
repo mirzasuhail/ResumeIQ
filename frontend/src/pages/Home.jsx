@@ -13,22 +13,22 @@ export default function Home({ onAnalysisComplete }) {
   useEffect(() => {
     // Visitor tracking
     const cachedVisitors = localStorage.getItem('resumeiq_visitors');
-    let currentVisitors = 12480;
+    let currentVisitors = 1000;
     if (cachedVisitors) {
       currentVisitors = parseInt(cachedVisitors, 10) + 1;
     } else {
-      currentVisitors = 12480 + Math.floor(Math.random() * 50);
+      currentVisitors = 1000 + Math.floor(Math.random() * 50);
     }
     localStorage.setItem('resumeiq_visitors', currentVisitors);
     setVisitorCount(currentVisitors);
 
     // Resumes analyzed tracking
     const cachedAnalysis = localStorage.getItem('resumeiq_analysis');
-    let currentAnalysis = 4890;
+    let currentAnalysis = 489;
     if (cachedAnalysis) {
       currentAnalysis = parseInt(cachedAnalysis, 10);
     } else {
-      currentAnalysis = 4890 + Math.floor(Math.random() * 20);
+      currentAnalysis = 489 + Math.floor(Math.random() * 20);
       localStorage.setItem('resumeiq_analysis', currentAnalysis);
     }
     setAnalysisCount(currentAnalysis);
